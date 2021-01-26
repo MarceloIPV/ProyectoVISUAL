@@ -14,7 +14,7 @@ class MvcController
         }
         else
         {
-            $enlacesController="login.php";
+            $enlacesController="inicio.php";
         }
         $respuesta= EnlacesPaginas::enlacesPaginasModel($enlacesController);
         include $respuesta;
