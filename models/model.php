@@ -4,10 +4,8 @@ class EnlacesPaginas
     public function enlacesPaginasModel($enlacesModel)
     {
         if($enlacesModel== "inicio" ||  
-        $enlacesModel== "nosotros" ||
-        $enlacesModel== "servicios" ||
-        $enlacesModel== "login" ||
-        $enlacesModel== "contactos")
+        
+        $enlacesModel== "login" )
         {
             $module="views/modules/".$enlacesModel.".php";
         }
