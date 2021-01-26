@@ -8,8 +8,8 @@ include "models/conexion.php";
 <!DOCTYPE html>
 <?php
   if ($_SESSION['rol'] == 'ADMIN') {
-      include "views/modules/nosotrosAD.php";
+      include "nosotrosA.php";
   }else{
-    include "views/modules/nosotrosS.php";
+    include "nosotrosS.php";
   }
 ?>

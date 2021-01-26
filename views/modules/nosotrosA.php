@@ -1,11 +1,3 @@
-<?php
-
-include "models/conexion.php";
-
-?>
-
-
-<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -17,25 +9,18 @@ include "models/conexion.php";
     <script type="text/javascript" src="jquery-easyui-1.9.10/jquery.easyui.min.js"></script>
 </head>
 <body>
-
     <?php
- 
+    include "../../models/conexion.php";
         $cedula="";
-
-
         $APE_EST = $_POST['APE_EST'];
 
-        $query="SELECT * FROM estudiantes where APE_EST = '$APE_EST' ";
+        $query="SELECT * FROM estudiantes where EST_APE = '$APE_EST' ";
         if(isset($_POST['CED_EST'])!= ""){
             $q=$conn->real_escape_string($_POST['CED_EST']);
-            $query="SELECT * FROM estudiantes WHERE CED_EST LIKE '%".$q."%'";
+            $query="SELECT * FROM estudiantes WHERE EST_EST LIKE '%".$q."%'";
         }
-
         $resultado = mysqli_query($conn, $query);
-
         ?>
-
-
 
     <div style="margin:20px 0;">
 
@@ -50,7 +35,7 @@ include "models/conexion.php";
             </div>
     
             <div>
-            <input type="submit" name="buscar" class="easyui-button" value="buscar" style="width:90px" onclick="$('#w').window('open')">
+            <input type="submit" name="buscar" class="easyui-linkbutton"  value="Buscar" style="width:90px" onclick="$('#w').window('open')">
             
 
 
@@ -69,7 +54,7 @@ include "models/conexion.php";
                 <th field="DIR_EST" width="50">DIRECCION</th>
                 <th field="TEL_EST" width="50">TELEFONO</th>
                 <th field="SEXO_EST" width="50">SEXO</th>
-                
+                <th field="CUR_EST" width="50">CURSO</th>
                 
                 
                 
@@ -82,13 +67,13 @@ include "models/conexion.php";
                 {
              ?>
             <tr>
-                <td><?php echo $filas["CED_EST"]?></td>
-                <td><?php echo $filas["NOM_EST"]?></td>
-                <td><?php echo $filas["APE_EST"]?></td>
-                <td><?php echo $filas["DIR_EST"]?></td>
-                <td><?php echo $filas["TEL_EST"]?></td>
-                <td><?php echo $filas["SEXO_EST"]?></td>
-                <td><?php echo $filas["CUR_EST"]?></td>
+                <td><?php echo $filas["EST_CED"]?></td>
+                <td><?php echo $filas["EST_NOM"]?></td>
+                <td><?php echo $filas["EST_APE"]?></td>
+                <td><?php echo $filas["EST_DIR"]?></td>
+                <td><?php echo $filas["EST_TEL"]?></td>
+                <td><?php echo $filas["EST_SEX"]?></td>
+                <td><?php echo $filas["EST_CUR"]?></td>
             </tr>
             <?php 
                 }
@@ -114,11 +99,6 @@ include "models/conexion.php";
         
 
     </div>
-
-    
-   
-    
-   
 
 </body>
 

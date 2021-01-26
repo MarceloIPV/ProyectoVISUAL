@@ -20,6 +20,7 @@
                 <th field="EST_DIR" width="50">DIRECCION</th>
                 <th field="EST_TEL" width="50">TELEFONO</th>
                 <th field="EST_SEX" width="50">SEXO</th>
+                <th field="EST_CUR" width="50">CURSO</th>
             </tr>
         </thead>
     </table>

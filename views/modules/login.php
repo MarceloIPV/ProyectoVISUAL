@@ -33,7 +33,15 @@ if (!empty($_SESSION['active'])) {
 ?>
 <!DOCTYPE html>
 <html>
-
+<head>
+    <meta charset="UTF-8">
+    <title>Basic Dialog - jQuery EasyUI Demo</title>
+    <link rel="stylesheet" type="text/css" href="jquery-easyui-1.9.10/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="jquery-easyui-1.9.10/themes/icon.css">
+    <link rel="stylesheet" type="text/css" href="jquery-easyui-1.9.10/demo.css">
+    <script type="text/javascript" src="jquery-easyui-1.9.10/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery-easyui-1.9.10/jquery.easyui.min.js"></script>
+</head>
 <body>
     <div id="dlg" class="easyui-panel" style="width:400px;padding:50px 60px">
         <div style="margin-bottom:20px;text-align: center;">
@@ -41,10 +49,10 @@ if (!empty($_SESSION['active'])) {
         </div>
         <form action="" method="POST">
             <div style="margin-bottom:20px">
-                <input type="text" name="usr" placeholder="Username" style="width:100%;height:34px;padding:10px;">
+                <input type="text" name="usr" class="easyui-textbox" placeholder="Username" style="width:100%;height:34px;padding:10px;">
             </div>
             <div style="margin-bottom:20px">
-                <input type="password" name="pwd" placeholder="Password" style="width:100%;height:34px;padding:10px">
+                <input type="password" class="easyui-textbox" name="pwd" placeholder="Password" style="width:100%;height:34px;padding:10px">
             </div>
             <div class="alert" style="margin-bottom:20px;text-align: center;">
                 <?php
@@ -52,7 +60,7 @@ if (!empty($_SESSION['active'])) {
                 ?>
             </div>
             <div style="text-align: center;">
-                <input value="LOGIN" type="submit" style="width:120px;height:34px;padding:10px">
+                <input value="LOGIN" type="submit" class="easyui-linkbutton" style="width:120px;height:34px;padding:10px">
             </div>
         </form>
     </div>

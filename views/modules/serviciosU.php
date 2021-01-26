@@ -20,6 +20,7 @@
                 <th field="EST_DIR" width="50">DIRECCION</th>
                 <th field="EST_TEL" width="50">TELEFONO</th>
                 <th field="EST_SEX" width="50">SEXO</th>
+                <th field="EST_CUR" width="50">CURSO</th>
             </tr>
         </thead>
     </table>
@@ -27,8 +28,6 @@
         <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="newEst()">CREAR ESTUDIANTE</a>
         <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="editEst()">EDITAR ESTUDIANTE</a>
         <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="deleteEst()">ELIMINAR ESTUDIANTE</a>
-        <a href="1/imprimirE.php?action" class="easyui-linkbutton" iconCls="icon-print" plain="true" > IMPRIMIR</a>
-
     </div>
     <!--crear usr-->
     <div id="dlg" class="easyui-dialog" style="width:400px" data-options="closed:true,modal:true,border:'thin',buttons:'#dlg-buttons'">
@@ -44,18 +43,21 @@
                 <input name="EST_APE" class="easyui-textbox" required="true" label="APELLIDO:" style="width:100%">
             </div>
             <div style="margin-bottom:10px">
-                <select name="EST_DIR" class="easyui-combobox" required="true" label="DIRECCION:" style="width:100%;">
-                    <option value="SIN_DIRECCION">SIN DIRECCION</option>
-                    <?php
-                    include "views/modules/direcciones.php";
-                    ?>
-                </select>
+                <input name="EST_DIR" class="easyui-textbox" required="true" label="CEDULA:" style="width:100%">
             </div>
             <div style="margin-bottom:10px">
                 <input name="EST_TEL" class="easyui-textbox" required="true" label="TELEFONO:" style="width:100%;">
             </div>
             <div style="margin-bottom:10px">
                 <input id="sexo" class="easyui-combobox" name="EST_SEX" style="width:100%;" data-options=" valueField:'sexo',textField:'sexo',label:'SEXO:'">
+            </div>
+            <div style="margin-bottom:10px">
+                <select name="EST_CUR" class="easyui-combobox" required="true" label="CURSO:" style="width:100%;">
+                    <option value="SIN_DIRECCION">SIN CURSO</option>
+                    <?php
+                    include "views/modules/curso.php";
+                    ?>
+                </select>
             </div>
         </form>
     </div>
@@ -83,7 +85,11 @@
                 <input name="EST_TEL" class="easyui-textbox" required="true" label="TELEFONO:" style="width:100%">
             </div>
             <div style="margin-bottom:10px">
-                <input id="sexo1" class="easyui-combobox" name="EST_SEX" style="width:100%;" data-options=" valueField:'sexo',textField:'sexo',label:'SEXO:'"> </div>
+                <input id="sexo1" class="easyui-combobox" name="EST_SEX" style="width:100%;" data-options=" valueField:'sexo',textField:'sexo',label:'SEXO:'"> 
+            </div>
+            <div style="margin-bottom:10px">
+                <input name="EST_CUR" class="easyui-textbox" required="true" label="CURSO:" style="width:100%">
+            </div>
         </form>
     </div>
     <div id="dlg-buttons">

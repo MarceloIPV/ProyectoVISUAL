@@ -17,10 +17,12 @@ if ($op === null) {
             $nombre = $_POST['EST_NOM'];
             $apellido = $_POST['EST_APE'];
             $direccion = $_POST['EST_DIR'];
+            $direccion = $_POST['EST_DIR'];
             $telefono = $_POST['EST_TEL'];
             $sexo = $_POST['EST_SEX'];
-            $sqlInsert = "INSERT INTO estudiantes(EST_CED,EST_NOM,EST_APE,EST_DIR,EST_TEL,EST_SEX) 
-                        VALUES ('$cedula','$nombre','$apellido','$direccion','$telefono','$sexo')";
+            $curso = $_POST['EST_CUR'];
+            $sqlInsert = "INSERT INTO estudiantes(EST_CED,EST_NOM,EST_APE,EST_DIR,EST_TEL,EST_SEX,EST_CUR) 
+                        VALUES ('$cedula','$nombre','$apellido','$direccion','$telefono','$sexo','$curso')";
             if ($mysqli->query($sqlInsert) === TRUE) {
                 echo json_encode("Se guardo correctamente");
             } else {
@@ -38,7 +40,8 @@ if ($op === null) {
             $direccion = $_POST['EST_DIR'];
             $telefono = $_POST['EST_TEL'];
             $sexo = $_POST['EST_SEX'];
-            $sqlUpdate = "UPDATE estudiantes SET EST_NOM = '$nombre', EST_APE = ' $apellido', EST_DIR = '$direccion',EST_TEL = '$telefono', EST_SEX= '$sexo' 
+            $curso = $_POST['EST_CUR'];
+            $sqlUpdate = "UPDATE estudiantes SET EST_NOM = '$nombre', EST_APE = ' $apellido', EST_DIR = '$direccion',EST_TEL = '$telefono', EST_SEX= '$sexo',EST_CUR= '$curso'  
               WHERE EST_CED = '$cedula'";
             if ($mysqli->query($sqlUpdate) === TRUE) {
                 echo json_encode("Se actualizo correctamente");

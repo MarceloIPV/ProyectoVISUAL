@@ -12,8 +12,8 @@
 
 <body>
     <header>
-        <h1> UNIVERSIDAD TECNICA DE AMBATO </h1>
-        <h2> COMPUTACION VISUAL </h2>
+    <h1> COMPUTACION VISUAL </h1>
+    <h2> SEGUNDO PARCIAL </h2>
         <div style="  width:100%;text-align:right ;color:black;padding: 5px;font-size: 6.0m;font-weight: bold;">
               <h3 style= >Bienvenido
             <?php

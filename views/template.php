@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title> Proyecto Web </title>
+    <title> Proyecto final </title>
     <meta charset="UTF-8">
     <link rel=StyleSheet href="css/template.css" typr="text/css">
     <link rel="stylesheet" type="text/css" href="jquery-easyui-1.9.7/themes/black/easyui.css">
@@ -12,8 +12,9 @@
 
 <body>
     <header>
-    <h1> UNIVERSIDAD TECNICA DE AMBATO </h1>
-  <h2> COMPUTACION VISUAL </h2>
+    <h1> COMPUTACION VISUAL </h1>
+    <h2> SEGUNDO PARCIAL </h2>
+  
     </header>
     <?php
     include "modules/navigation.php";

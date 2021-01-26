@@ -14,18 +14,18 @@
             <h3>Reporte por sexo del estudiante</h3>
             <div style="margin-bottom:10px">
                 <input name="SEXO_EST" class="easyui-textbox" required="true" label="SEXO:" style="width:100%">
-                <input type='submit' value='Reportar'>
+                <h1></h1>
+                <input type='submit' class="easyui-linkbutton" value='Reportar' style = "width:10%;height:15%" >
             </div>
             
 </form>
 <form method="POST" novalidatestyle="margin:0;padding:20px 50px" action="http://localhost/ProyectoVISUAL/pdf/reportePDF.php"> 
             <h3>Reporte por curso</h3>
             <div style="margin-bottom:10px">
-                <input name="EST_CUR" class="easyui-textbox" required="true" label="CURSO:" style="width:100%">
+                <input name="EST_CUR" class="easyui-textbox"  required="true" label="CURSO:" style="width:100%"><h1></h1>
+                <input type='submit' class="easyui-linkbutton" value='Reportar' style = "width:10%;height:15%" >
             </div>
-            <div style="margin-bottom:10px">
-                <input type='submit' value='Reportar' >
-            </div>
+           
 </form>
 </body>
 
