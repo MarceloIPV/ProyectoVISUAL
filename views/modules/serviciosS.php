@@ -1,5 +1,14 @@
 
 <html>
+<head>
+    <meta charset="UTF-8">
+    <title>Basic Dialog - jQuery EasyUI Demo</title>
+    <link rel="stylesheet" type="text/css" href="jquery-easyui-1.9.10/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="jquery-easyui-1.9.10/themes/icon.css">
+    <link rel="stylesheet" type="text/css" href="jquery-easyui-1.9.10/demo.css">
+    <script type="text/javascript" src="jquery-easyui-1.9.10/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery-easyui-1.9.10/jquery.easyui.min.js"></script>
+</head>
 <body>
     <!--tabla-->
     <table id="dg" title="ESTUDIANTES" class="easyui-datagrid" style="width:700px;height:250px;color:black;" url="models/cargar.php" pagination="true" rownumbers="true" fitColumns="true" singleSelect="true">
