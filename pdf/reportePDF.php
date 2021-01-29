@@ -1,7 +1,8 @@
 <?php
     
-	$mysqli=new mysqli("localhost","root","","universidad"); 
-	
+	$mysqli=new mysqli("sql111.epizy.com","epiz_27780605","BT8BcsIKYHKdJRzsxkZ@","epiz_27780605_universidad"); 
+
+
 	include 'plantillaFPDF.php';
 	$curso=$_POST['EST_CUR'];
 	$query = "SELECT EST_CED, EST_NOM, EST_APE, EST_DIR, EST_TEL, EST_SEX, EST_CUR FROM estudiantes WHERE EST_CUR='$curso'";

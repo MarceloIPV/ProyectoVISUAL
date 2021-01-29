@@ -1,9 +1,9 @@
 <?php
 
-$servername="localhost";
-$username="root";
-$password="";
-$dbname="universidad";
+$servername="sql111.epizy.com";
+$username="epiz_27780605";
+$password="BT8BcsIKYHKdJRzsxkZ@";
+$dbname="epiz_27780605_universidad";
 $conn= mysqli_connect($servername,$username,$password,$dbname);
 $mysqli = new mysqli($servername,$username,$password,$dbname);
 if(!$mysqli)
